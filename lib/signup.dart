@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:videogame/second_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -75,14 +73,14 @@ class _SignUpPageState extends State<SignUpPage> {
       );
 
       // Store additional user data in Firestore
-      await FirebaseFirestore.instance
+      /*await FirebaseFirestore.instance
           .collection('users')
           .doc(userCredential.user!.uid)
           .set({
         'name': _nameController.text,
         'email': _emailController.text.trim(),
         'createdAt': FieldValue.serverTimestamp(),
-      });
+      });*/
 
       // Navigate to welcome page
       if (mounted) {
@@ -183,7 +181,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   horizontal: 16, vertical: 16),
                               border: InputBorder.none,
                               hintStyle: const TextStyle(color: Colors.grey),
-                              errorText: _nameError,
+                              //errorText: _nameError,
                             ),
                           ),
                         ),
@@ -230,7 +228,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   horizontal: 16, vertical: 16),
                               border: InputBorder.none,
                               hintStyle: const TextStyle(color: Colors.grey),
-                              errorText: _emailError,
+                              //errorText: _emailError,
                             ),
                             keyboardType: TextInputType.emailAddress,
                           ),
@@ -278,7 +276,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   horizontal: 16, vertical: 16),
                               border: InputBorder.none,
                               hintStyle: const TextStyle(color: Colors.grey),
-                              errorText: _passwordError,
+                              //errorText: _passwordError,
                             ),
                             obscureText: true,
                           ),

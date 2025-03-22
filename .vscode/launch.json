@@ -4,18 +4,23 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "rdbg",
-            "name": "Debug current file with rdbg",
-            "request": "launch",
-            "script": "${file}",
-            "args": [],
-            "askParameters": true
-        },
-        {
-            "type": "rdbg",
-            "name": "Attach with rdbg",
-            "request": "attach"
-        }
+      {
+        "name": "videogame",
+        "request": "launch",
+        "type": "dart"
+      },
+      {
+        "name": "videogame (profile mode)",
+        "request": "launch",
+        "type": "dart",
+        "flutterMode": "profile"
+      },
+      {
+        "name": "videogame (release mode)",
+        "request": "launch",
+        "type": "dart",
+        "flutterMode": "release"
+      }
     ]
-}
+  }
+  

@@ -25,14 +25,6 @@ class _WelcomePageState extends State<WelcomePage> {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            const Text(
-              'User!',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
             const SizedBox(height: 80),
             Image.asset(
               'img/Gunter.gif',
